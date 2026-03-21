@@ -32,14 +32,14 @@ Placeholder items and placeholder terms — added where the discourse lacks a ca
 
 ## Reproducing the OWL Reasoning Results
 
-The reasoning results reported in Section 5.2 of the paper can be reproduced using the HermiT OWL 2 Reasoner (Glimm et al., 2014) against `owl/fi_core_concepts.owl`. 
+The reasoning results reported in Section 5.2 of the paper can be reproduced using the HermiT OWL 2 Reasoner (Glimm et al., 2014) against `edoc2026/owl/fi_core_concepts.owl`. 
 HermiT is available as a plug-in for Protégé (https://protege.stanford.edu) and can be invoked directly from the Reasoner menu after loading the OWL file.
 
 ---
 
 ## AI Validation Disclosure
 
-As disclosed in the paper's Acknowledgements, Claude AI Sonnet 4.6 (Anthropic, 2026) was used as an automated validation tool to cross-check traceability links between the formal contexts and the EO discourse. All substantive interpretive decisions were made by the human authors. The exact prompts submitted and the full reports returned are available in `validation/prompts` and `validation/<concept>/` respectively.
+As disclosed in the paper's Acknowledgements, Claude AI Sonnet 4.6 (Anthropic, 2026) was used as an automated validation tool to cross-check traceability links between the formal contexts and the EO discourse. All substantive interpretive decisions were made by the human authors. The prompts submitted are available in `edoc2026/prompts` and the full validation reports are available in the concept directory. A report lists if any intervention was needed to correct reasoning. 
 
 ---
 
