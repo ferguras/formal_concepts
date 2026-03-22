@@ -1,7 +1,7 @@
 B
 
 4
-10
+11
 
 waterdrops assigned to a cloud
 crystals assigned to a cloud
@@ -9,15 +9,16 @@ birthday of [x] is [y] assigned to Charlie Chaplin and day 2411108
 {waterdrops, crystals} assigned to a cloud
 assigned to an Object
 can be recognised
-unary or binary predicate
+predicate
 unary predicate
 binary predicate
+assigned to two Objects
 collection of Features of a Thing
 Term Feature
 Term Form
 Term Unary feature
 Term Binary feature
-XXXX..X.X.
-XXXX..X.X.
-XXX.X.X..X
-.....X.X..
+XXXX...X.X.
+XXXX...X.X.
+.XX.XX.X..X
+......X.X..
