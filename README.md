@@ -1,5 +1,5 @@
 # Formal Definitions of Concepts in Enterprise Ontology
-## EDOC 2026 Artefact Repository
+## Artefact Repository
 
 **Paper:** *Formal Definitions of Core Concepts in Enterprise Ontology: A Foundation for Machine-Verifiable Implementation Traceability*
 **Authors:** Edwin de Haan, Marien R. Krouwel, and Henderik A. Proper
