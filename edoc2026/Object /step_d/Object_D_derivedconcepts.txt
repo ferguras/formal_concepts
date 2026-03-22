@@ -1,0 +1,17 @@
+Object:   { [object 701] , (object 701) , [purchase 31424] , (purchase 31424) , [sale 1618] , (sale 1618) , <object 245> , object 976 },
+      { persistent , identity , assignable Features , bare , Term Object }
+	  
+Unadorned object:   { object 976 },
+      { persistent , identity , assignable Features , bare , Object of no thing , Term Object , Term Unadorned object }
+
+Adorned object:   { [object 701] , (object 701) , [purchase 31424] , (purchase 31424) , [sale 1618] , (sale 1618) , <object 245> },
+      { persistent , identity , Object of a Thing , assignable Features , bare , Term Object , Term Adorned object }
+
+Conceptual object:   { (object 701) , (purchase 31424) , (sale 1618) },
+      { persistent , identity , Object of a Thing , assignable Features , bare , Object of a Conceptual thing , Term Object , Term Adorned object , Term Conceptual object }
+
+Abstract object:   { <object 245> },
+      { persistent , identity , Object of a Thing , assignable Features , bare , Object of an Abstract thing , Term Object , Term Abstract object , Term Adorned object }
+
+Concrete object:   { [object 701] , [purchase 31424] , [sale 1618] },
+      { persistent , identity , Object of a Thing , assignable Features , bare , Object of Concrete thing , Term Object , Term Concrete object , Term Adorned object }
