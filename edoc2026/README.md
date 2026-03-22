@@ -80,10 +80,9 @@ Each concept directory contain steps subdirectories, corresponding to the steps 
 
 The different file types possibly encountered in steps are described below. Files are named consistently across concepts and steps; replace `<Concept>` with `Object`, `Feature`, or `Thing`.
 
-### `step_d/` — Derive formal concepts
-
 | File | Description |
 |------|-------------|
+| `<Concept>_<Step>_Cycles.pdf` | **Cyclic procedure steps PDF** — describes each cycle performed within the given step; for each analysis it provides the input sentence, followed by the extracted knowledge. When an interpretive challenge is encountered, the issue is flagged, resolution options are provided and the chosen option is documented. After an interpretive challenge, a cycle starts anew from the first sentence. |
 | `<Concept>_<Step>_Discourse.pdf` | **Discourse PDF** — contains the input text, together with the interpretation of each sentence. Each sentence is annotated with its `<page-number>-<sentence-number>` reference to the source text (Dietz & Mulder, 2024). Identified interpretive challenges and their resolutions are recorded inline. Note that the output of each concept's analysis serves as input for the next: Object starts from the original source text; Feature incorporates the formal definitions of Object; Thing incorporates the formal definitions of both Object and Feature. |
 | `<Concept>_<Step>_Formalcontext.pdf` | **Formal context PDF** — contains the complete formal context table (items × characteristics). Each item and characteristic is referenced by `<page-number>-<sentence-number>` when traceable to the source text, or marked `-` when no source reference exists (e.g. for placeholder entries). Each relationship in the table is marked `X` when the item–characteristic relationship is explicitly stated in the source text, or `#` when it is derived by applying FI theory. |
 | `<Concept>_<Step>_formalcontext.cxt` | **FCA context file** — the formal context in the standard `.cxt` format, suitable for use with FCA tools such as [fcaR](https://github.com/Malaga-FCA-group/fcaR) and the [ODIS online FCA tool](https://odis-web.github.io/). This file is produced from the formal context at the end of step D and can be used to independently reproduce the derived concepts. |
