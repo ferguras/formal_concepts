@@ -10,7 +10,9 @@
 
 ## Overview
 
-This directory contains all artefacts produced for the EDOC 2026 paper. The paper formalises three core superconcepts of Enterprise Ontology's (EO) Factual Information (FI) theory using Formal Concept Analysis (FCA). Each concept is analysed in its own subdirectory; the analysis of each concept produces 31 formally defined (sub)concepts in total.
+This repository contains all artefacts produced during the formalisation of the three core superconcepts of Enterprise Ontology's (EO) Factual Information (FI) theory: **Object**, **Feature**, and **Thing**. The artefacts support the claims made in the paper and enable independent verification of the formal concept definitions, their traceability to the EO discourse, and their conformance to quality criteria.
+
+The formalisation approach is grounded in Formal Concept Analysis (FCA) and operates exclusively within EO's own theoretical paradigm. Every item, characteristic, and interpretive challenge resolution recorded here is referenced by page and sentence number to the source text: Dietz, J.L.G. and Mulder, H.B.F., *Enterprise Ontology — A Human-Centric Approach to Understanding the Essence of Organisation*, Second Edition, Springer (2024).
 
 The three concepts analysed are, in order of dependency:
 
@@ -103,6 +105,13 @@ The notation used throughout these artefacts follows the conventions established
   - **⟨ ⟩** = Abstract
 - Placeholder items and placeholder terms are marked explicitly in each table and carry no source reference (`-`)
 - Formal context relationships: **X** = explicitly stated in source text; **#** = derived by applying FI theory; **-** = no relationship
+
+---
+
+## Reproducing the OWL Reasoning Results
+
+The reasoning results reported in Section 5.2 of the paper can be reproduced using the HermiT OWL 2 Reasoner (Glimm et al., 2014) against `edoc2026/owl/fi_core_concepts.owl`. 
+HermiT is available as a plug-in for Protégé (https://protege.stanford.edu) and can be invoked directly from the Reasoner menu after loading the OWL file.
 
 ---
 
