@@ -5,7 +5,7 @@
 **Authors:** Edwin de Haan, Marien R. Krouwel, and Henderik A. Proper
 **Submitted to:** EDOC 2026
 
-The EDOC 2026 repository contains all artefacts produced during the formalisation of the three core superconcepts of Enterprise Ontology's (EO) Factual Information (FI) theory: **Object**, **Feature**, and **Thing**. The artefacts support the claims made in the paper and enable independent verification of the formal concept definitions, their traceability to the EO discourse, and their conformance to quality criteria.
+The EDOC 2026 directory contains all artefacts produced during the formalisation of the three core superconcepts of Enterprise Ontology's (EO) Factual Information (FI) theory: **Object**, **Feature**, and **Thing**. The artefacts support the claims made in the paper and enable independent verification of the formal concept definitions, their traceability to the EO discourse, and their conformance to quality criteria.
 
 The formalisation approach is grounded in Formal Concept Analysis (FCA) and operates exclusively within EO's own theoretical paradigm. Every item, characteristic, and interpretive challenge resolution recorded here is referenced by page and sentence number to the source text: Dietz, J.L.G. and Mulder, H.B.F., *Enterprise Ontology — A Human-Centric Approach to Understanding the Essence of Organisation*, Second Edition, Springer (2024).
 
