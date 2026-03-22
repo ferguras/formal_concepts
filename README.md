@@ -18,7 +18,7 @@ The formalisation approach is grounded in Formal Concept Analysis (FCA) and oper
 ## Notation
 
 Throughout the formal context tables, sentence references follow the notation used in the paper:
-> **(p** *page-number***, s** *sentence-number***)** refers to a specific sentence on a specific page of Dietz & Mulder (2024).
+> **(p** ***page-number***, **s** ***sentence-number*** **)** refers to a specific sentence on a specific page of Dietz & Mulder (2024).
 The artefact uses page-number-sentence-number keys.
 
 Bracket conventions in the formal contexts are:
