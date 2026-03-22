@@ -1,0 +1,12 @@
+
+Form:   { {waterdrops, crystals} assigned to a cloud },
+      { collection of Features of a Thing , Term Form }
+
+Feature:   { waterdrops assigned to a cloud , crystals assigned to a cloud , birthday of [x] is [y] assigned to Charlie Chaplin and day 2411108 },
+      { assigned to an Object , can be recognised , unary or binary predicate , Term Feature }
+
+Binary feature:   { birthday of [x] is [y] assigned to Charlie Chaplin and day 2411108 },
+      { assigned to an Object , can be recognised , unary or binary predicate , binary predicate , Term Feature , Term Binary feature }
+
+Unary feature:   { waterdrops assigned to a cloud , crystals assigned to a cloud },
+      { assigned to an Object , can be recognised , unary or binary predicate , unary predicate , Term Feature , Term Unary feature }
