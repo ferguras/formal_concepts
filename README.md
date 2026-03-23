@@ -11,6 +11,23 @@ The formalisation approach is grounded in Formal Concept Analysis (FCA) and oper
 
 ---
 
+## Disclaimer
+
+> **Important Notice**
+>
+> This taxonomy is an **original academic artifact** developed as part of scholarly research at the University of Maastricht. It represents the author's interpretation and analysis of Enterprise Ontology, based on *Enterprise Ontology — A Human-Centric Approach to Understanding the Essence of Organisation*, Second Edition, Springer (2024).
+>
+> **This work:**
+> - Is **based on** Enterprise Ontology but is **not a substitute** for it
+> - Does **not reproduce** the source text verbatim; all definitions are paraphrased interpretations
+> - Should be viewed as a **scholarly analysis** and the author's interpretation of Enterprise Ontology concepts
+> - Was created in an **academic context** and does not offer guarantees as a reference document
+> - Is **not affiliated with, endorsed by, or officially connected to** the Enterprise Engineering institute
+>
+> For authoritative source text, please consult the official Enterprise Ontology theories available at [Enterprise Engineering institute](https://ee-institute.org/).
+
+---
+
 ## Notation
 
 Throughout the formal context tables, sentence references follow the notation used in the paper:
