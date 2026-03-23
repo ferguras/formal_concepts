@@ -52,6 +52,7 @@ For each non-trivial formal concept, a term definition is constructed from its i
 ```
 edoc2026/
 ├── README.md               ← this file
+├── Core_Definitions.pdf    ← All definitions & constraints produced for Object, Feature, and Thing
 ├── prompts/                ← AI validation prompts & definition checklist
 ├── owl/                    ← OWL/XML document for reasoning
 ├── Object/
