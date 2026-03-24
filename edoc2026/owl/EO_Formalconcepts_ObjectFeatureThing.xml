@@ -1,0 +1,2040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:fc="https://github.com/ferguras/formal_concepts#"
+  xml:base="https://github.com/ferguras/formal_concepts#">
+
+  <!-- =======================================================================
+       ONTOLOGY DECLARATION 
+       ======================================================================= -->
+  
+  <owl:Ontology rdf:about="https://github.com/ferguras/formal_concepts/">
+    <rdfs:label xml:lang="en">Formal Enterprise Ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">Ontology derived from Formal Concept Analysis of Enterprise Ontology</rdfs:comment>
+    <dc:title xml:lang="en">Formal Enterprise Ontology</dc:title>
+    <dc:description xml:lang="en">This ontology represents a Formal Concept Analysis (FCA) of Enterprise Ontology. Class names use terms from the formal context, while attributes define class intensions.</dc:description>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-20</dcterms:created>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-20</dcterms:modified>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://github.com/ferguras/formal_concepts#EnterpriseOntology"/>
+  </owl:Ontology>
+
+  <!-- =======================================================================
+       DATATYPE PROPERTIES - ATTRIBUTES FROM FORMAL CONTEXT
+       (Terms are NOT included as properties)
+       ======================================================================= -->
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#AssignedToAnObject">
+    <rdfs:label xml:lang="en">assigned to an Object</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is assigned to an Object</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#UnaryFeature"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: assigned to an Object</dc:description>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#CanBeRecognised">
+    <rdfs:label xml:lang="en">can be recognised</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this can be recognised</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Feature"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: can be recognised</dc:description>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#Predicate">
+    <rdfs:label xml:lang="en">predicate</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is a predicate</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Feature"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: predicate</dc:description>
+  </owl:DatatypeProperty>
+  
+ <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#UnaryPredicate">
+    <rdfs:label xml:lang="en">unary predicate</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is a unary predicate</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#UnaryFeature"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: unary predicate</dc:description>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#BinaryPredicate">
+    <rdfs:label xml:lang="en">binary predicate</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is a binary predicate</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#BinaryFeature"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: binary predicate</dc:description>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#AssignedToTwoObjects">
+    <rdfs:label xml:lang="en">assigned to two Objects</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is assigned to two Objects</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#BinaryFeature"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: assigned to two Objects</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#SetOfFeaturesOfAThing">
+    <rdfs:label xml:lang="en">set of Features of a Thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is a set of Features of a Thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Form"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: set of Features of a Thing</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#Persistent">
+    <rdfs:label xml:lang="en">persistent</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is persistent</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Object"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: persistent</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#Identity">
+    <rdfs:label xml:lang="en">identity</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is an unique identity</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Object"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: identity</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#Bare">
+    <rdfs:label xml:lang="en">bare</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is bare</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Object"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: bare</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#ObjectOfAThing">
+    <rdfs:label xml:lang="en">Object of a Thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is an identity of a Thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#AdornedObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: Object of a Thing</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#ObjectOfNoThing">
+    <rdfs:label xml:lang="en">Object of No thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this does not represent any thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#UnadornedObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: Object of No thing</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#ObjectOfConcreteThing">
+    <rdfs:label xml:lang="en">Object of Concrete thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is an identity of a Concrete thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: Object of Concrete thing</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#ObjectOfAbstractThing">
+    <rdfs:label xml:lang="en">Object of Abstract thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is an identity of an Abstract thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#AbstractObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: Object of Abstract thing</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#ObjectOfConceptualThing">
+    <rdfs:label xml:lang="en">Object of conceptual thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is an identity of a Conceptual thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: Object of Conceptual thing</dc:description>
+  </owl:DatatypeProperty>
+
+  <!-- =======================================================================
+       DATATYPE PROPERTIES - THING FORMAL CONTEXT
+       ======================================================================= -->
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#InAMind">
+    <rdfs:label xml:lang="en">in a mind</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is in a mind</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: in a mind</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#CanRepresentAThing">
+    <rdfs:label xml:lang="en">can represent a Thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this can represent a Thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: can represent a Thing</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#InReality">
+    <rdfs:label xml:lang="en">in reality</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is in reality</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: in reality</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#CollectionOfThings">
+    <rdfs:label xml:lang="en">collection of Things</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is a collection of Things</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: collection of Things</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#SingleThing">
+    <rdfs:label xml:lang="en">single Thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is a single Thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: single Thing</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#Distinguishable">
+    <rdfs:label xml:lang="en">distinguishable</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is distinguishable</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: distinguishable</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#WithObject">
+    <rdfs:label xml:lang="en">with Object</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is with an Object</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: with Object</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#WithAssignedFeatures">
+    <rdfs:label xml:lang="en">with assigned Features</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is with assigned Features</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: with assigned Features</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#PhysicalDimensions">
+    <rdfs:label xml:lang="en">physical dimensions</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this has physical dimensions</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: physical dimensions</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#Conceived">
+    <rdfs:label xml:lang="en">conceived</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this is conceived</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: conceived</dc:description>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://github.com/ferguras/formal_concepts#CannotRepresentAThing">
+    <rdfs:label xml:lang="en">cannot represent a Thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates whether this cannot represent a Thing</rdfs:comment>
+    <rdfs:domain rdf:resource="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dc:description xml:lang="en">Attribute from formal context: cannot represent a Thing</dc:description>
+  </owl:DatatypeProperty>
+
+
+  <!-- =======================================================================
+       CLASS HIERARCHY - DERIVED CONCEPTS FROM FORMAL CONTEXT
+       (Terms used for naming classes only, NOT as properties on individuals)
+       ======================================================================= -->
+
+  <!-- Top Level Class: Feature -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Feature">
+    <rdfs:label xml:lang="en">Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Feature: a recognisable predicate that is assigned to an Object or a pair of Objects</rdfs:comment>
+    <skos:prefLabel xml:lang="en">Feature</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {assigned to an Object, can be recognised, predicate}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CanBeRecognised"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Predicate"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- UnaryFeature (Subclass of Feature) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#UnaryFeature">
+    <rdfs:label xml:lang="en">UnaryFeature</rdfs:label>
+    <rdfs:comment xml:lang="en">Unary feature: a Feature that is a unary predicate</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#Feature"/>
+    <skos:prefLabel xml:lang="en">UnaryFeature</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {assigned to an Object, can be recognised, predicate, unary predicate}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Feature"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#UnaryPredicate"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#AssignedToAnObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- BinaryFeature (Subclass of Feature) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#BinaryFeature">
+    <rdfs:label xml:lang="en">BinaryFeature</rdfs:label>
+    <rdfs:comment xml:lang="en">Binary feature: a Feature that is a binary predicate</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#Feature"/>
+    <skos:prefLabel xml:lang="en">BinaryFeature</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {can be recognised, predicate, binary predicate, assigned to two Objects}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Feature"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#BinaryPredicate"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#AssignedToTwoObjects"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- Top Level Class: Form -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Form">
+    <rdfs:label xml:lang="en">Form</rdfs:label>
+    <rdfs:comment xml:lang="en">Form: a non-empty set of Features that are assigned to an Object</rdfs:comment>
+    <skos:prefLabel xml:lang="en">Form</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {set of Features of a Thing}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#SetOfFeaturesOfAThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- Top Level Class: Object -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Object">
+    <rdfs:label xml:lang="en">Object</rdfs:label>
+    <rdfs:comment xml:lang="en">Object: a persistent, bare identity</rdfs:comment>
+    <skos:prefLabel xml:lang="en">Object</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {persistent, identity, bare}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Persistent"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Identity"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Bare"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- Adorned Object (Subclass of Object) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AdornedObject">
+    <rdfs:label xml:lang="en">AdornedObject</rdfs:label>
+    <rdfs:comment xml:lang="en">Adorned object: an Object of a Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#Object"/>
+    <skos:prefLabel xml:lang="en">AdornedObject</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {persistent, identity, Object of a Thing, bare}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Object"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#ObjectOfAThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- Concrete Object (Subclass of Adorned Object) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteObject">
+    <rdfs:label xml:lang="en">ConcreteObject</rdfs:label>
+    <rdfs:comment xml:lang="en">Concrete object: an Adorned object of a Concrete thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#AdornedObject"/>
+    <skos:prefLabel xml:lang="en">ConcreteObject</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {persistent, identity, Object of a Thing, bare, Object of Concrete thing}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AdornedObject"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#ObjectOfConcreteThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- Conceptual Object (Subclass of Adorned Object) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualObject">
+    <rdfs:label xml:lang="en">ConceptualObject</rdfs:label>
+    <rdfs:comment xml:lang="en">Conceptual object: an Adorned object of a Conceptual thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#AdornedObject"/>
+    <skos:prefLabel xml:lang="en">ConceptualObject</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {persistent, identity, Object of a Thing, bare, Object of a Conceptual thing}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AdornedObject"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#ObjectOfConceptualThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- Abstract Object (Subclass of Adorned Object) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AbstractObject">
+    <rdfs:label xml:lang="en">AbstractObject</rdfs:label>
+    <rdfs:comment xml:lang="en">Abstract object: an Adorned object of an Abstract thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#AdornedObject"/>
+    <skos:prefLabel xml:lang="en">AbstractObject</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {persistent, identity, Object of a Thing, bare, Object of an Abstract thing}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AdornedObject"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#ObjectOfAbstractThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- Unadorned Object (Subclass of Object, disjoint from Adorned Object) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#UnadornedObject">
+    <rdfs:label xml:lang="en">UnadornedObject</rdfs:label>
+    <rdfs:comment xml:lang="en">Unadorned object: an Object of No thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#Object"/>
+    <skos:prefLabel xml:lang="en">UnadornedObject</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {persistent, identity, bare, Object of no thing}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Object"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#ObjectOfNoThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- =======================================================================
+       CLASS HIERARCHY - THING CONCEPTS DERIVED FROM FORMAL CONTEXT (D)
+       ======================================================================= -->
+
+  <!-- Top Level Class: Thing -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Thing">
+    <rdfs:label xml:lang="en">Thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Thing: a relationship between an Object and assigned Features which makes it distinguishable</rdfs:comment>
+    <skos:prefLabel xml:lang="en">Thing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- NoeticThing (Subclass of Thing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing">
+    <rdfs:label xml:lang="en">NoeticThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Noetic thing: a Thing in a mind</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <skos:prefLabel xml:lang="en">NoeticThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Thing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ConceptualThing (Subclass of NoeticThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualThing">
+    <rdfs:label xml:lang="en">ConceptualThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Conceptual thing: a Noetic thing that can represent another Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <skos:prefLabel xml:lang="en">ConceptualThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, can represent a Thing, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CanRepresentAThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- AbstractThing (Subclass of NoeticThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AbstractThing">
+    <rdfs:label xml:lang="en">AbstractThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Abstract thing: a Noetic thing that cannot represent another Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <skos:prefLabel xml:lang="en">AbstractThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, distinguishable, with Object, with assigned Features, cannot represent a Thing}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CannotRepresentAThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ElementalThing (Subclass of Thing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalThing">
+    <rdfs:label xml:lang="en">ElementalThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Elemental thing: a Thing that is a single Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <skos:prefLabel xml:lang="en">ElementalThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {single Thing, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Thing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#SingleThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ElementalNoeticThing (Subclass of NoeticThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalNoeticThing">
+    <rdfs:label xml:lang="en">ElementalNoeticThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Elemental noetic thing: a Noetic thing that is a single Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <skos:prefLabel xml:lang="en">ElementalNoeticThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, single Thing, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#SingleThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ElementalConceptualThing (Subclass of ConceptualThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalConceptualThing">
+    <rdfs:label xml:lang="en">ElementalConceptualThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Elemental conceptual thing: a Conceptual thing that is a single Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+    <skos:prefLabel xml:lang="en">ElementalConceptualThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, can represent a Thing, single Thing, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CanRepresentAThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#SingleThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ElementalAbstractThing (Subclass of AbstractThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalAbstractThing">
+    <rdfs:label xml:lang="en">ElementalAbstractThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Elemental abstract thing: an Abstract thing that is a single Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+    <skos:prefLabel xml:lang="en">ElementalAbstractThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, single Thing, distinguishable, with Object, with assigned Features, cannot represent a Thing}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#SingleThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CannotRepresentAThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- CompositeThing (Subclass of Thing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeThing">
+    <rdfs:label xml:lang="en">CompositeThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Composite thing: a Thing that is a collection of Things</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <skos:prefLabel xml:lang="en">CompositeThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {collection of Things, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Thing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CollectionOfThings"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- CompositeNoeticThing (Subclass of NoeticThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeNoeticThing">
+    <rdfs:label xml:lang="en">CompositeNoeticThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Composite noetic thing: a Noetic thing that is a collection of Things</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <skos:prefLabel xml:lang="en">CompositeNoeticThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, collection of Things, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CollectionOfThings"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- CompositeConceptualThing (Subclass of ConceptualThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeConceptualThing">
+    <rdfs:label xml:lang="en">CompositeConceptualThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Composite conceptual thing: a Conceptual thing that is a collection of Things</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+    <skos:prefLabel xml:lang="en">CompositeConceptualThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, can represent a Thing, collection of Things, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CanRepresentAThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CollectionOfThings"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- CompositeAbstractThing (Subclass of AbstractThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeAbstractThing">
+    <rdfs:label xml:lang="en">CompositeAbstractThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Composite abstract thing: an Abstract thing that is a collection of Things</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+    <skos:prefLabel xml:lang="en">CompositeAbstractThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in a mind, collection of Things, distinguishable, with Object, with assigned Features, cannot represent a Thing}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InAMind"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CollectionOfThings"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CannotRepresentAThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ConcreteThing (Subclass of Thing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteThing">
+    <rdfs:label xml:lang="en">ConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Concrete thing: a Thing that is in reality</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <skos:prefLabel xml:lang="en">ConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Thing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- TangibleConcreteThing (Subclass of ConcreteThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#TangibleConcreteThing">
+    <rdfs:label xml:lang="en">TangibleConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Tangible concrete thing: a Concrete thing with physical dimensions</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <skos:prefLabel xml:lang="en">TangibleConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, distinguishable, with Object, with assigned Features, physical dimensions}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#PhysicalDimensions"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- IntangibleConcreteThing (Subclass of ConcreteThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing">
+    <rdfs:label xml:lang="en">IntangibleConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Intangible concrete thing: a Concrete thing that is conceived</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <skos:prefLabel xml:lang="en">IntangibleConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, distinguishable, with Object, with assigned Features, conceived}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Conceived"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ElementalConcreteThing (Subclass of ConcreteThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalConcreteThing">
+    <rdfs:label xml:lang="en">ElementalConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Elemental concrete thing: a Concrete thing that is a single Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <skos:prefLabel xml:lang="en">ElementalConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, single Thing, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#SingleThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ElementalTangibleConcreteThing (Subclass of TangibleConcreteThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalTangibleConcreteThing">
+    <rdfs:label xml:lang="en">ElementalTangibleConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Elemental tangible concrete thing: a Tangible concrete thing that is a single Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <skos:prefLabel xml:lang="en">ElementalTangibleConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, single Thing, distinguishable, with Object, with assigned Features, physical dimensions}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#SingleThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#PhysicalDimensions"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- ElementalIntangibleConcreteThing (Subclass of IntangibleConcreteThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalIntangibleConcreteThing">
+    <rdfs:label xml:lang="en">ElementalIntangibleConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Elemental intangible concrete thing: an Intangible concrete thing that is a single Thing</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+    <skos:prefLabel xml:lang="en">ElementalIntangibleConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, single Thing, distinguishable, with Object, with assigned Features, conceived}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#SingleThing"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Conceived"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- CompositeConcreteThing (Subclass of ConcreteThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeConcreteThing">
+    <rdfs:label xml:lang="en">CompositeConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Composite concrete thing: a Concrete thing that is a collection of Things</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <skos:prefLabel xml:lang="en">CompositeConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, collection of Things, distinguishable, with Object, with assigned Features}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CollectionOfThings"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- CompositeTangibleConcreteThing (Subclass of TangibleConcreteThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing">
+    <rdfs:label xml:lang="en">CompositeTangibleConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Composite tangible concrete thing: a Tangible concrete thing that is a collection of Things</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <skos:prefLabel xml:lang="en">CompositeTangibleConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, collection of Things, distinguishable, with Object, with assigned Features, physical dimensions}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CollectionOfThings"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#PhysicalDimensions"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- CompositeIntangibleConcreteThing (Subclass of IntangibleConcreteThing) -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeIntangibleConcreteThing">
+    <rdfs:label xml:lang="en">CompositeIntangibleConcreteThing</rdfs:label>
+    <rdfs:comment xml:lang="en">Composite intangible concrete thing: an Intangible concrete thing that is a collection of Things</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+    <skos:prefLabel xml:lang="en">CompositeIntangibleConcreteThing</skos:prefLabel>
+    <dc:description xml:lang="en">Derived concept from FCA with intension: {in reality, collection of Things, distinguishable, with Object, with assigned Features, conceived}</dc:description>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#InReality"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#CollectionOfThings"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Distinguishable"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithObject"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#WithAssignedFeatures"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="https://github.com/ferguras/formal_concepts#Conceived"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+
+  <!-- =======================================================================
+       DISJOINTNESS AXIOMS
+       ======================================================================= -->
+
+  <!-- UnaryFeature and BinaryFeature are disjoint -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#UnaryFeature">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#BinaryFeature"/>
+  </owl:Class>
+
+  <!-- AdornedObject and UnadornedObject are disjoint -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AdornedObject">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#UnadornedObject"/>
+  </owl:Class>
+
+  <!-- ConcreteObject, ConceptualObject, and AbstractObject are pairwise disjoint -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteObject">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualObject"/>
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#AbstractObject"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualObject">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#AbstractObject"/>
+  </owl:Class>
+
+  <!-- =======================================================================
+       DISJOINTNESS AXIOMS - THING CONCEPTS
+       ======================================================================= -->
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalNoeticThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#ElementalConcreteThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalConceptualThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#ElementalAbstractThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalTangibleConcreteThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#ElementalIntangibleConcreteThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeNoeticThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeConceptualThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#CompositeAbstractThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#CompositeIntangibleConcreteThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#TangibleConcreteThing">
+    <owl:disjointWith rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+  </owl:Class>
+
+
+  <!-- =======================================================================
+       COMPLETE COVERAGE AXIOMS (Superconcept  complete relationship with subconcepts)
+       ======================================================================= -->
+
+  <!-- Feature is exactly the union of UnaryFeature and BinaryFeature -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Feature">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#UnaryFeature"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#BinaryFeature"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- AdornedObject is exactly the union of ConcreteObject, ConceptualObject, and AbstractObject -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AdornedObject">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteObject"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualObject"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AbstractObject"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- Object is exactly the union of AdornedObject and UnadornedObject -->
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Object">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AdornedObject"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#UnadornedObject"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <!-- =======================================================================
+       INDIVIDUALS - OBJECTS FROM FORMAL CONTEXT
+       (Term characteristics are NOT included as properties on individuals)
+       ======================================================================= -->
+
+  <!-- Concrete Objects -->
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#object_701_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteObject"/>
+    <rdfs:label xml:lang="en">[object 701]</rdfs:label>
+    <fc:Persistent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Persistent>
+    <fc:Identity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Identity>
+    <fc:Bare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Bare>
+    <fc:ObjectOfAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfAThing>
+    <fc:ObjectOfConcreteThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfConcreteThing>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#purchase_31424_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteObject"/>
+    <rdfs:label xml:lang="en">[purchase 31424]</rdfs:label>
+    <fc:Persistent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Persistent>
+    <fc:Identity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Identity>
+    <fc:Bare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Bare>
+    <fc:ObjectOfAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfAThing>
+    <fc:ObjectOfConcreteThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfConcreteThing>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#sale_1618_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteObject"/>
+    <rdfs:label xml:lang="en">[sale 1618]</rdfs:label>
+    <fc:Persistent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Persistent>
+    <fc:Identity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Identity>
+    <fc:Bare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Bare>
+    <fc:ObjectOfAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfAThing>
+    <fc:ObjectOfConcreteThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfConcreteThing>
+  </owl:NamedIndividual>
+
+  <!-- Conceptual Objects -->
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#object_701_conceptual">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualObject"/>
+    <rdfs:label xml:lang="en">(object 701)</rdfs:label>
+    <fc:Persistent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Persistent>
+    <fc:Identity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Identity>
+    <fc:Bare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Bare>
+    <fc:ObjectOfAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfAThing>
+    <fc:ObjectOfConceptualThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfConceptualThing>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#purchase_31424_conceptual">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualObject"/>
+    <rdfs:label xml:lang="en">(purchase 31424)</rdfs:label>
+    <fc:Persistent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Persistent>
+    <fc:Identity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Identity>
+    <fc:Bare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Bare>
+    <fc:ObjectOfAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfAThing>
+    <fc:ObjectOfConceptualThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfConceptualThing>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#sale_1618_conceptual">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualObject"/>
+    <rdfs:label xml:lang="en">(sale 1618)</rdfs:label>
+    <fc:Persistent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Persistent>
+    <fc:Identity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Identity>
+    <fc:Bare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Bare>
+    <fc:ObjectOfAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfAThing>
+    <fc:ObjectOfConceptualThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfConceptualThing>
+  </owl:NamedIndividual>
+
+  <!-- Abstract Objects -->
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#object_245_abstract">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#AbstractObject"/>
+    <rdfs:label xml:lang="en">*object 245*</rdfs:label>
+    <fc:Persistent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Persistent>
+    <fc:Identity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Identity>
+    <fc:Bare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Bare>
+    <fc:ObjectOfAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfAThing>
+    <fc:ObjectOfAbstractThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfAbstractThing>
+  </owl:NamedIndividual>
+
+  <!-- Unadorned Objects -->
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#object_946">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#UnadornedObject"/>
+    <rdfs:label xml:lang="en">object 946</rdfs:label>
+    <fc:Persistent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Persistent>
+    <fc:Identity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Identity>
+    <fc:Bare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Bare>
+    <fc:ObjectOfNoThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:ObjectOfNoThing>
+  </owl:NamedIndividual>
+
+  <!-- =======================================================================
+       INDIVIDUALS - FEATURES AND FORMS FROM FORMAL CONTEXT
+       (Term characteristics are NOT included as properties on individuals)
+       ======================================================================= -->
+
+  <!-- Unary Features -->
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#waterdrops_assigned_to_a_cloud">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#UnaryFeature"/>
+    <rdfs:label xml:lang="en">waterdrops assigned to a cloud</rdfs:label>
+    <fc:CanBeRecognised rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CanBeRecognised>
+    <fc:Predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Predicate>
+    <fc:AssignedToAnObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:AssignedToAnObject>
+    <fc:UnaryPredicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:UnaryPredicate>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#crystals_assigned_to_a_cloud">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#UnaryFeature"/>
+    <rdfs:label xml:lang="en">crystals assigned to a cloud</rdfs:label>
+    <fc:CanBeRecognised rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CanBeRecognised>
+    <fc:Predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Predicate>
+    <fc:AssignedToAnObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:AssignedToAnObject>
+    <fc:UnaryPredicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:UnaryPredicate>
+  </owl:NamedIndividual>
+
+  <!-- Binary Features -->
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#birthday_of_x_is_y_assigned_to_Charlie_Chaplin_and_day_2411108">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#BinaryFeature"/>
+    <rdfs:label xml:lang="en">birthday of [x] is [y] assigned to Charlie Chaplin and day 2411108</rdfs:label>
+    <fc:CanBeRecognised rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CanBeRecognised>
+    <fc:Predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Predicate>
+    <fc:BinaryPredicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:BinaryPredicate>
+    <fc:AssignedToTwoObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:AssignedToTwoObjects>
+  </owl:NamedIndividual>
+
+  <!-- Forms -->
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#form_waterdrops_crystals_assigned_to_a_cloud">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Form"/>
+    <rdfs:label xml:lang="en">{waterdrops assigned to a cloud, crystals assigned to a cloud}</rdfs:label>
+    <fc:SetOfFeaturesOfAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:SetOfFeaturesOfAThing>
+  </owl:NamedIndividual>
+
+
+  <!-- =======================================================================
+       COMPLETE COVERAGE AXIOMS - THING CONCEPTS
+       ======================================================================= -->
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Thing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#Thing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#NoeticThing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalNoeticThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeNoeticThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConceptualThing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalConceptualThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeConceptualThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#AbstractThing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalAbstractThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeAbstractThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteThing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ConcreteThing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalConcreteThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#TangibleConcreteThing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalTangibleConcreteThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#ElementalIntangibleConcreteThing"/>
+          <owl:Class rdf:about="https://github.com/ferguras/formal_concepts#CompositeIntangibleConcreteThing"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+
+
+  <!-- =======================================================================
+       INDIVIDUALS - THINGS FROM FORMAL CONTEXT (D)
+       ======================================================================= -->
+
+  <!-- CompositeTangibleConcreteThing individuals -->
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_cloud_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a cloud]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_body_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a body]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_human_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a human]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_dog_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a dog]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#the_human_charlie_chaplin_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[the human 'Charlie Chaplin']</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_car_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a car]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_house_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a house]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_student_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a student]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_ship_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a ship]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_plank_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a plank]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_butterfly_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a butterfly]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_caterpillar_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a caterpillar]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_brain_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a brain]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_motor_block_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a motor block]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <!-- CompositeIntangibleConcreteThing individuals -->
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_membership_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeIntangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a membership]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:Conceived rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Conceived>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_rental_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeIntangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a rental]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:Conceived rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Conceived>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#an_insurance_policy_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeIntangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[an insurance policy]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:Conceived rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Conceived>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#an_employment_contract_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeIntangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[an employment contract]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:Conceived rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Conceived>
+  </owl:NamedIndividual>
+
+  <!-- CompositeConceptualThing individuals -->
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#the_human_charlie_chaplin_conceptual">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeNoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConceptualThing"/>
+    <rdfs:label xml:lang="en">(the human 'Charlie Chaplin')</rdfs:label>
+    <fc:InAMind rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InAMind>
+    <fc:CanRepresentAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CanRepresentAThing>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_chair_conceptual">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeNoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeConceptualThing"/>
+    <rdfs:label xml:lang="en">(a chair)</rdfs:label>
+    <fc:InAMind rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InAMind>
+    <fc:CanRepresentAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CanRepresentAThing>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+  </owl:NamedIndividual>
+
+  <!-- CompositeAbstractThing individuals -->
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_geometric_shape_abstract">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeNoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#CompositeAbstractThing"/>
+    <rdfs:label xml:lang="en">*a geometric shape*</rdfs:label>
+    <fc:InAMind rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InAMind>
+    <fc:CollectionOfThings rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CollectionOfThings>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:CannotRepresentAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CannotRepresentAThing>
+  </owl:NamedIndividual>
+
+  <!-- ElementalTangibleConcreteThing individuals -->
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_quark_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#TangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalTangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a quark]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:SingleThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:SingleThing>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:PhysicalDimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:PhysicalDimensions>
+  </owl:NamedIndividual>
+
+  <!-- ElementalIntangibleConcreteThing individuals -->
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_single_agreement_concrete">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#IntangibleConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalConcreteThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalIntangibleConcreteThing"/>
+    <rdfs:label xml:lang="en">[a single agreement]</rdfs:label>
+    <fc:InReality rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InReality>
+    <fc:SingleThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:SingleThing>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:Conceived rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Conceived>
+  </owl:NamedIndividual>
+
+  <!-- ElementalAbstractThing individuals -->
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_number_abstract">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalNoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalAbstractThing"/>
+    <rdfs:label xml:lang="en">*a number*</rdfs:label>
+    <fc:InAMind rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InAMind>
+    <fc:SingleThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:SingleThing>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:CannotRepresentAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CannotRepresentAThing>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_boolean_value_abstract">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalNoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalAbstractThing"/>
+    <rdfs:label xml:lang="en">*a boolean value*</rdfs:label>
+    <fc:InAMind rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InAMind>
+    <fc:SingleThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:SingleThing>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:CannotRepresentAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CannotRepresentAThing>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_date_abstract">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#AbstractThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalNoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalAbstractThing"/>
+    <rdfs:label xml:lang="en">*a date*</rdfs:label>
+    <fc:InAMind rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InAMind>
+    <fc:SingleThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:SingleThing>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+    <fc:CannotRepresentAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CannotRepresentAThing>
+  </owl:NamedIndividual>
+
+  <!-- ElementalConceptualThing individuals -->
+
+  <owl:NamedIndividual rdf:about="https://github.com/ferguras/formal_concepts#a_quark_conceptual">
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#Thing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#NoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ConceptualThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalNoeticThing"/>
+    <rdf:type rdf:resource="https://github.com/ferguras/formal_concepts#ElementalConceptualThing"/>
+    <rdfs:label xml:lang="en">(a quark)</rdfs:label>
+    <fc:InAMind rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:InAMind>
+    <fc:CanRepresentAThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:CanRepresentAThing>
+    <fc:SingleThing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:SingleThing>
+    <fc:Distinguishable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:Distinguishable>
+    <fc:WithObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithObject>
+    <fc:WithAssignedFeatures rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fc:WithAssignedFeatures>
+  </owl:NamedIndividual>
+
+</rdf:RDF>
