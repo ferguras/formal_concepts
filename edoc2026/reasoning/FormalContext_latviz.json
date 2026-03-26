@@ -1,0 +1,712 @@
+[
+  {
+    "ObjNames": [
+      "waterdrops assigned to a cloud",
+      "crystals assigned to a cloud",
+      "birthday of [x] is [y] assigned to Charlie Chaplin and day 2411108",
+      "{waterdrops assigned to a cloud, crystals assigned to a cloud}",
+      "[object 701]",
+      "[purchase 31424]",
+      "[sale 1618]",
+      "(object 701)",
+      "(purchase 31424)",
+      "(sale 1618)",
+      "*object 245*",
+      "object 946",
+      "[a cloud]",
+      "[a body]",
+      "[a human]",
+      "[a dog]",
+      "[the human 'Charlie Chaplin']",
+      "[a car]",
+      "[a house]",
+      "[a student]",
+      "[a ship]",
+      "[a plank]",
+      "[a butterfly]",
+      "[a caterpillar]",
+      "[a brain]",
+      "[a motor block]",
+      "[a membership]",
+      "[a rental]",
+      "[an insurance policy]",
+      "[an employment contract]",
+      "(the human 'Charlie Chaplin')",
+      "(a chair)",
+      "*a geometric shape*",
+      "[a quark]",
+      "[a single agreement]",
+      "(a quark)",
+      "*a number*",
+      "*a boolean value*",
+      "*a date*"
+    ],
+    "Params": {
+      "AttrNames": [
+        "CanBeRecognised",
+        "Predicate",
+        "AssignedToAnObject",
+        "UnaryPredicate",
+        "BinaryPredicate",
+        "AssignedToTwoObjects",
+        "SetOfFeaturesOfAThing",
+        "Persistent",
+        "Identity",
+        "Bare",
+        "ObjectOfAThing",
+        "ObjectOfNoThing",
+        "ObjectOfConcreteThing",
+        "ObjectOfAbstractThing",
+        "ObjectOfConceptualThing",
+        "Distinguishable",
+        "WithObject",
+        "WithAssignedFeatures",
+        "InAMind",
+        "CanRepresentAThing",
+        "CannotRepresentAThing",
+        "InReality",
+        "CollectionOfThings",
+        "SingleThing",
+        "PhysicalDimensions",
+        "Conceived",
+        "class:AbstractObject",
+        "class:AbstractThing",
+        "class:AdornedObject",
+        "class:BinaryFeature",
+        "class:CompositeAbstractThing",
+        "class:CompositeConceptualThing",
+        "class:CompositeConcreteThing",
+        "class:CompositeIntangibleConcreteThing",
+        "class:CompositeNoeticThing",
+        "class:CompositeTangibleConcreteThing",
+        "class:CompositeThing",
+        "class:ConceptualObject",
+        "class:ConceptualThing",
+        "class:ConcreteObject",
+        "class:ConcreteThing",
+        "class:ElementalAbstractThing",
+        "class:ElementalConceptualThing",
+        "class:ElementalConcreteThing",
+        "class:ElementalIntangibleConcreteThing",
+        "class:ElementalNoeticThing",
+        "class:ElementalTangibleConcreteThing",
+        "class:ElementalThing",
+        "class:Feature",
+        "class:Form",
+        "class:IntangibleConcreteThing",
+        "class:NoeticThing",
+        "class:Object",
+        "class:TangibleConcreteThing",
+        "class:Thing",
+        "class:UnadornedObject",
+        "class:UnaryFeature"
+      ]
+    }
+  },
+  {
+    "Count": 39,
+    "Data": [
+      {
+        "Count": 6,
+        "Inds": [
+          0,
+          1,
+          2,
+          3,
+          48,
+          56
+        ]
+      },
+      {
+        "Count": 6,
+        "Inds": [
+          0,
+          1,
+          2,
+          3,
+          48,
+          56
+        ]
+      },
+      {
+        "Count": 6,
+        "Inds": [
+          0,
+          1,
+          4,
+          5,
+          29,
+          48
+        ]
+      },
+      {
+        "Count": 2,
+        "Inds": [
+          6,
+          49
+        ]
+      },
+      {
+        "Count": 8,
+        "Inds": [
+          7,
+          8,
+          9,
+          10,
+          12,
+          28,
+          39,
+          52
+        ]
+      },
+      {
+        "Count": 8,
+        "Inds": [
+          7,
+          8,
+          9,
+          10,
+          12,
+          28,
+          39,
+          52
+        ]
+      },
+      {
+        "Count": 8,
+        "Inds": [
+          7,
+          8,
+          9,
+          10,
+          12,
+          28,
+          39,
+          52
+        ]
+      },
+      {
+        "Count": 8,
+        "Inds": [
+          7,
+          8,
+          9,
+          10,
+          14,
+          28,
+          37,
+          52
+        ]
+      },
+      {
+        "Count": 8,
+        "Inds": [
+          7,
+          8,
+          9,
+          10,
+          14,
+          28,
+          37,
+          52
+        ]
+      },
+      {
+        "Count": 8,
+        "Inds": [
+          7,
+          8,
+          9,
+          10,
+          14,
+          28,
+          37,
+          52
+        ]
+      },
+      {
+        "Count": 8,
+        "Inds": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          26,
+          28,
+          52
+        ]
+      },
+      {
+        "Count": 6,
+        "Inds": [
+          7,
+          8,
+          9,
+          11,
+          52,
+          55
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          24,
+          32,
+          35,
+          36,
+          40,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          25,
+          32,
+          33,
+          36,
+          40,
+          50,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          25,
+          32,
+          33,
+          36,
+          40,
+          50,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          25,
+          32,
+          33,
+          36,
+          40,
+          50,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          22,
+          25,
+          32,
+          33,
+          36,
+          40,
+          50,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          22,
+          31,
+          34,
+          36,
+          38,
+          51,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          22,
+          31,
+          34,
+          36,
+          38,
+          51,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          22,
+          27,
+          30,
+          34,
+          36,
+          51,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          23,
+          24,
+          40,
+          43,
+          46,
+          47,
+          53,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          21,
+          23,
+          25,
+          40,
+          43,
+          44,
+          47,
+          50,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          23,
+          38,
+          42,
+          45,
+          47,
+          51,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          23,
+          27,
+          41,
+          45,
+          47,
+          51,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          23,
+          27,
+          41,
+          45,
+          47,
+          51,
+          54
+        ]
+      },
+      {
+        "Count": 12,
+        "Inds": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          23,
+          27,
+          41,
+          45,
+          47,
+          51,
+          54
+        ]
+      }
+    ]
+  }
+]
