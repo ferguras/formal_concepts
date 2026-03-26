@@ -54,20 +54,20 @@ edoc2026/
 ├── README.md               ← this file
 ├── Core_Definitions.pdf    ← All definitions & constraints produced for Object, Feature, and Thing
 ├── prompts/                ← AI validation prompts & definition checklist
-├── owl/                    ← OWL/XML document for reasoning
-├── Object/
+├── reasoning/              ← OWL/XML & JSON document for reasoning
+├── Object/                 ← Formalisation steps & cycles for Object (sub)concepts
 │   ├── step_a/
 │   ├── step_b/
 │   ├── step_c/
 │   ├── step_d/
 │   └── step_e/
-├── Feature/
+├── Feature/                ← Formalisation steps & cycles for Feature (sub)concepts
 │   ├── step_a/
 │   ├── step_b/
 │   ├── step_c/
 │   ├── step_d/
 │   └── step_e/
-└── Thing/
+└── Thing/                  ← Formalisation steps & cycles for Thing (sub)concepts
 │   ├── step_a/
 │   ├── step_b/
 │   ├── step_c/
@@ -112,7 +112,14 @@ The notation used throughout these artefacts follows the conventions established
 ## Reproducing the OWL Reasoning Results
 
 The reasoning results reported in Section 5.2 of the paper can be reproduced using the HermiT OWL 2 Reasoner (Glimm et al., 2014) against `edoc2026/owl/fi_core_concepts.owl`. 
-HermiT is available as a plug-in for Protégé (https://protege.stanford.edu) and can be invoked directly from the Reasoner menu after loading the OWL file.
+HermiT is available as a plug-in for Protégé (https://protege.stanford.edu) and can be invoked directly from the Reasoner menu after loading the OWL file from the reasoning directory.
+
+---
+
+## Lattice visualisation 
+
+The formalcontext and its lattica can be visualised on https://latviz.loria.fr/index.html, after loading the latviz JSON file from the reasoning directory. 
+It displays the formalcontext, can display its lattice (in various forms), and calculate all implications for review.
 
 ---
 
