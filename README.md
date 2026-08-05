@@ -40,8 +40,8 @@ Bracket conventions in the formal contexts are:
 >
 > **This work:**
 > - Is **based on** Enterprise Ontology but is **not a substitute** for it
-> - Does **not reproduce** the source text verbatim; all definitions are paraphrased interpretations
-> - Should be viewed as a **scholarly analysis** and the author's interpretation of Enterprise Ontology concepts
+> - Does **not reproduce** the source text verbatim; all definitions are interpretations
+> - Should be viewed as a **scholarly analysis** of quoted sentences and the author's interpretation of Enterprise Ontology concepts
 > - Was created in an **academic context** and does not offer guarantees as a reference document
 > - Is **not affiliated with, endorsed by, or officially connected to** the Enterprise Engineering institute
 >
