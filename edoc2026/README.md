@@ -82,6 +82,7 @@ Each concept directory contain steps subdirectories, corresponding to the steps 
 ## File Descriptions
 
 The different file types possibly encountered in steps are described below. Files are named consistently across concepts and steps; replace `<Concept>` with `Object`, `Feature`, or `Thing`.
+The PDF documents are a log of the procedure that has been followed. The source artefact is not included because Enterprise Ontology text is copyrighted. The designed artefact is given as machine-readable files: the formal context in a .cxt file and the formal ontology in a .owl file.
 
 | File | Description |
 |------|-------------|
