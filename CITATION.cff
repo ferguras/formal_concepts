@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite it as below."
+title: "Formal Definitions of Core Concepts in Enterprise Ontology — formal concepts and definitions"
+type: dataset
+authors:
+  - family-names: "de Haan"
+    given-names: "Edwin"
+    orcid: "https://orcid.org/0009-0007-2565-3648"
+  - family-names: "Krouwel"
+    given-names: "Marien R."
+    orcid: "https://orcid.org/0000-0003-4115-3858"
+  - family-names: "Proper"
+    given-names: "Henderik A."
+    orcid: "https://orcid.org/0000-0002-7318-2496"
+license: CC-BY-4.0
+repository-code: "https://github.com/ferguras/formal_concepts"
