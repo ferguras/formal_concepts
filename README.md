@@ -5,12 +5,6 @@ The EDOC 2026 directory contains all artefacts produced during the formalisation
 
 ---
 
-## Further formalisation
-
-The other directories contain formal concepts created after the EDOC 2026 paper, based on the same formalisation approach.
-
----
-
 ## Formalisation approach
 
 The formalisation approach is grounded in Formal Concept Analysis (FCA) and operates exclusively within EO's own theoretical paradigm. Every item, characteristic, and interpretive challenge resolution recorded here is referenced by page and sentence number to the source text: Dietz, J.L.G. and Mulder, H.B.F., *Enterprise Ontology — A Human-Centric Approach to Understanding the Essence of Organisation*, Second Edition, Springer (2024).
